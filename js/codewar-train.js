@@ -1,6 +1,4 @@
-/**
- *
- * Every Friday and Saturday night, farmer counts amount of sheep returned back to his farm
+/** Every Friday and Saturday night, farmer counts amount of sheep returned back to his farm
  * (sheep returned on Friday stay and don't leave for a weekend).
  * Sheep return in groups each of the days -> you will be given two arrays with these numbers
  * (one for Friday and one for Saturday night). Entries are always positive ints, higher than zero.
@@ -16,6 +14,7 @@ function lostSheep(friday, saturday, total) {
 }
 
 console.log(lostSheep([(3, 6, 9, 12)], [3, 2, 1, 2, 3, 1], 44));
+
 /**Your non-profit company has assigned you the task of calculating some simple statistics on donations.
  * You have an array of integers, representing various amounts of donations your company has been given.
  * In particular, you're interested in the median value for donations.
@@ -46,3 +45,39 @@ function median(array) {
 }
 
 console.log('median - median', median([33, 99, 100, 30, 29, 50]));
+
+/**Create a function finalGrade, which calculates the final grade of a student depending on two parameters:
+ * a grade for the exam and a number of completed projects.
+ * This function should take two arguments: exam - grade for exam (from 0 to 100);
+ * projects - number of completed projects (from 0 and above);
+ *
+ * This function should return a number (final grade). There are four types of final grades:
+ * 100, if a grade for the exam is more than 90 or if a number of completed projects more than 10.
+ * 90, if a grade for the exam is more than 75 and if a number of completed projects is minimum 5.
+ * 75, if a grade for the exam is more than 50 and if a number of completed projects is minimum 2.
+ * 0, in other cases
+ */
+
+function finalGrade(exam, projects) {
+  let grade = 0;
+  switch (true) {
+    case exam > 90 || projects > 10:
+      grade = 100;
+      break;
+
+    case exam > 75 && projects >= 5:
+      grade = 90;
+      break;
+
+    case exam > 50 && projects >= 2:
+      grade = 75;
+      break;
+
+    default:
+      grade = 0;
+  }
+
+  return grade;
+}
+
+console.log('finalGrade(exam, projects)', finalGrade(100, 12));
