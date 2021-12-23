@@ -44,3 +44,5 @@ function median(array) {
     (sortedArray[array.length / 2 - 1] + sortedArray[array.length / 2]) / 2
   );
 }
+
+console.log('median - median', median([33, 99, 100, 30, 29, 50]));
