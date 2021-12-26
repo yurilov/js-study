@@ -81,3 +81,30 @@ function finalGrade(exam, projects) {
 }
 
 console.log('finalGrade(exam, projects)', finalGrade(100, 12));
+
+/** An isogram is a word that has no repeating letters, consecutive or non-consecutive.
+ * Implement a function that determines whether a string that contains only letters is an isogram.
+ * Assume the empty string is an isogram. Ignore letter case.
+ */
+
+function isIsogram(str) {
+  const uniqueLtrs = str
+    .toLowerCase()
+    .split('')
+    .filter((letter, index, array) => array.indexOf(letter) === index)
+    .join('');
+  return str.toLowerCase() === uniqueLtrs;
+}
+
+console.log(isIsogram('Dermatoglyphics'));
+
+/*Your team is writing a fancy new text editor and you've been tasked with implementing the line numbering.
+Write a function which takes a list of strings and returns each line prepended by the correct number.
+The numbering starts at 1. The format is n: string. Notice the colon and space in between.
+
+number(["a", "b", "c"]) // => ["1: a", "2: b", "3: c"]
+*/
+
+const number = array => array.map((el, index, array) => `${index + 1}: ${el}`);
+
+console.log(number(['a', 'b', 'c']));
