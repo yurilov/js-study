@@ -1,4 +1,4 @@
-const word = input('Please, enter the word!');
+const word = prompt('Please, enter the word!');
 console.log(word);
 function mapString(string) {
   let map = {};
