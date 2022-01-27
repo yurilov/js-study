@@ -1,18 +1,25 @@
-const word = prompt('Please, enter the word!');
-console.log(word);
-function mapString(string) {
-  let map = {};
-  for (let i = 0; i < string.length; i += 1) {
-    let letter = string[i];
+const formRef = document.querySelector('.form');
+
+const inputRef = formRef.firstElementChild;
+
+const cartographyRef = formRef.nextElementSibling;
+
+console.log(inputRef);
+
+inputRef.addEventListener('input', mapString);
+
+function mapString(e) {
+  e.preventDefault();
+  const word = e.target.value;
+
+  const map = {};
+  for (let i = 0; i < word.length; i += 1) {
+    let letter = word[i];
     if (map[letter]) {
       map[letter].push(i);
     } else {
       map[letter] = [i];
     }
   }
-  return map;
-};
-let stringMap = mapString(word);
-for (let letter in stringMap) {
-  console.log(letter + ': ' + stringMap[letter]);
+  cartographyRef.textContent = JSON.stringify(map);
 }
