@@ -1,5 +1,5 @@
 import { mapString } from 'string-cartography';
-import { dictionaryWord, stringSequence } from 'subsequence.words';
+// import { dictionaryWord, stringSequence } from 'subsequence.words';
 
 function compareLetters(word, object, ___) {
   for (var letter of word) {
@@ -11,6 +11,6 @@ function compareLetters(word, object, ___) {
   }
   return true;
 }
-console.log(dictionaryWord);
-let stringSequenceObject = mapString(stringSequence, ___);
-console.log(compareLetters(dictionaryWord, stringSequenceObject));
+// console.log(dictionaryWord);
+// let stringSequenceObject = mapString(stringSequence, ___);
+// console.log(compareLetters(dictionaryWord, stringSequenceObject));
