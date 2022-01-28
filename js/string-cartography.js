@@ -8,7 +8,7 @@ console.log(inputRef);
 
 inputRef.addEventListener('input', mapString);
 
-function mapString(e) {
+export function mapString(e) {
   e.preventDefault();
   const word = e.target.value;
 
