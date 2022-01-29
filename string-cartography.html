@@ -4,23 +4,25 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS Test</title>
+    <title>strings</title>
+    <link rel="stylesheet" href="./css/string-cartography.css">
 </head>
 <body>
-    <h1>String Cartography</h1>
-    <form class="form">
-        <input type="text" placeholder="Enter word to see the cartography">
-    </form>
-
-    <p class="cartography"></p>
-    
-    <form class="form">
-        <input type="text" placeholder="Enter word to compare with">
-    </form>
-
-    <p class="compare"></p>
+    <a href="./index.html">Back</a>
+    <section class='section'>
+        <div class="container">
+            <h1 class="section__heading">Search word</h1>
+            <form class="form">
+                <input type="text" class='js-input input' placeholder="Enter word to see the cartography">
+                <input type="text" class='js-input input' placeholder="Enter word to compare with">
+            </form>
+            <div>
+                <p class="cartography text"></p>
+                <p class="result text"></p>
+            </div>
+        </div>
+    </section>
 
     <script src="./js/string-cartography.js" type="module"></script>
-    <script src="./js/letter-lookup.js" type="module"></script>
 </body>
 </html>
