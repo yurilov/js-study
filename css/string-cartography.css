@@ -79,3 +79,8 @@ ul {
   line-height: 1.25;
   color: #212121;
 }
+.text {
+  font-size: 20px;
+  line-height: 1.71;
+  text-align: center;
+}
