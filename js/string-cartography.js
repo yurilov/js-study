@@ -37,7 +37,7 @@ const stringToCompareRef = document.querySelectorAll('.js-input')[1];
 const resultOutputRef = document.querySelector('.result');
 
 function compareLetters(word, object) {
-  for (var letter of word) {
+  for (let letter of word) {
     if (object[letter]) {
       continue;
     } else {
@@ -56,7 +56,7 @@ function stringInputHandler(e) {
 
   const map = JSON.parse(cartographyRef.textContent);
 
-  resultOutputRef.textContent = compareLetters(word, map);
+  resultOutputRef.textContent = isSubsequence(word, map);
 }
 
 function findNextIndex(array, minIndex) {
@@ -66,4 +66,20 @@ function findNextIndex(array, minIndex) {
     }
   }
   return false;
+}
+
+function isSubsequence(word, map) {
+  let minIndex = 0;
+  for (let letter of word) {
+    if (map[letter]) {
+      minIndex = findNextIndex(map[letter], minIndex);
+      if (minIndex === false) {
+        return false;
+      }
+      map;
+    } else {
+      return false;
+    }
+  }
+  return true;
 }
