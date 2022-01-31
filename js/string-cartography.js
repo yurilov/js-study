@@ -83,3 +83,25 @@ function isSubsequence(word, map) {
   }
   return true;
 }
+
+function longestMatch(string, dictionary) {
+  let map = mapString(string);
+  let match = [];
+  for (var word of dictionary) {
+    if (isSubsequence(word, map)) {
+      match.push(word);
+    }
+  }
+
+  return findLongestWord(match);
+}
+
+function findLongestWord(array) {
+  let longestWord = '';
+  for (let word of array) {
+    if (word.length > longestWord.length) {
+      longestWord = word;
+    }
+  }
+  return longestWord;
+}
