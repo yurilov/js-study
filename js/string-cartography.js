@@ -47,7 +47,7 @@ function compareLetters(word, object) {
   return true;
 }
 
-stringToCompareRef.addEventListener('input', stringInputHandler);
+stringToCompareRef.addEventListener('submit', stringInputHandler);
 
 function stringInputHandler(e) {
   e.preventDefault();
@@ -105,3 +105,5 @@ function findLongestWord(array) {
   }
   return longestWord;
 }
+
+const dictionaryRef = document.querySelector('.dictionary');
